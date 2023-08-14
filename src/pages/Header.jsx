@@ -2,8 +2,7 @@ import React from "react";
 
 export default function Header() {
   return (
-    <nav className="bg-white dark:bg-gray-900 w-full ">
-      {/* fixed  z-20 top-0 left-0  */}
+    <nav className="bg-white dark:bg-gray-900 w-full relative">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="HomePage" className="flex items-center">
           <span className="self-center text-3xl font-bold whitespace-nowrap dark:text-white">
@@ -44,40 +43,44 @@ export default function Header() {
           </button>
         </div>
         <div
-          className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 md:pr-[50%]"
+          className="items-center justify-between hidden md:block md:w-0 w-full md:order-1 md:pr-[50%] p-4 "
           id="navbar-sticky"
         >
-          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-            <li>
+          <ul className="flex flex-col items-center p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-[hsl(257,27%,26%)]  md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <li className="md:p-0 pt-5 pb-5">
               <a
                 href="#"
-                className="hover:text-black text-[18px] font-bold dark:text-white text-[hsl(_0,0%,75%)]"
+                className="hover:text-black text-[18px] text-white md:text-[hsl(0,0%,75%)] font-bold dark:text-white"
                 aria-current="page"
               >
                 Features
               </a>
             </li>
-            <li>
+            <li className="md:p-0 pb-5">
               <a
                 href="#"
-                className="hover:text-black text-[18px] font-bold dark:text-white text-[hsl(_0,0%,75%)]"
+                className="hover:text-black text-[18px] font-bold dark:text-white text-white md:text-[hsl(0,0%,75%)]"
               >
                 Pricing
               </a>
             </li>
-            <li>
+            <li className="md:p-0 pb-5">
               <a
                 href="#"
-                className="hover:text-black text-[18px] font-bold dark:text-white text-[hsl(_0,0%,75%)]"
+                className="hover:text-black text-[18px] font-bold dark:text-white text-white md:text-[hsl(0,0%,75%)]"
               >
                 Resources
               </a>
             </li>
-            <li>
-              <button type="button" className="block md:hidden ">
+            <div className="md:hidden block h-[0.01rem] w-full bg-white"></div>
+            <li className="pb-5">
+              <button className="md:hidden block rounded-full font-bold px-5 py-1.5 text-center text-white md:text-black">
                 Login
               </button>
-              <button type="button" className="block md:hidden ">
+              <div className="w-3"></div>
+            </li>
+            <li className="w-full pb-5">
+              <button className="w-full md:hidden block rounded-full bg-[hsl(180,66%,49%)] font-bold text-white px-5 py-1.5 text-center hover:bg-[hsl(180,79%,87%)]">
                 Sign up
               </button>
             </li>

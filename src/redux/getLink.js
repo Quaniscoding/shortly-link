@@ -27,7 +27,7 @@ export const callGetLink = (urlLink) => {
                 method: "GET",
                 url: `https://api.shrtco.de/v2/shorten?url=${urlLink}`
             })
-            dispatch(getData(callGetLink))
+            dispatch(getData(callGetLink.data))
         } catch (error) {
             console.log(error);
         }
