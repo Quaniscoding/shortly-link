@@ -3,7 +3,6 @@ import { Routes, Route, unstable_HistoryRouter as HistoryRouter } from 'react-ro
 import { history } from './utils/history';
 import Layout from './layout/Layout.jsx';
 import HomePage from './components/HomePage/HomePage';
-
 function App() {
     return (
         <div className="App">
